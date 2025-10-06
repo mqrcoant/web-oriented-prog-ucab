@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contacto - Tech News</title>
+    </head>
+    <body>
+        <h1>Contacto</h1>
+        <p>Si tienes preguntas o comentarios, no dudes en ponerte en contacto con nosotros.</p>
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Datos Personales</legend>
+                
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}">
+
+                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" min="18" max="100">
+            </fieldset>
+            <fieldset>
+                <legend>Consulta</legend>
+                <label for="consultas">Consultas:</label>
+                <input type="radio" id="soporte" name="consultas" value="soporte" checked> Soporte técnico
+                <input type="radio" id="informacion" name="consultas" value="informacion"> Información
+                <input type="radio" id="colaboracion" name="consultas" value="colaboracion"> Colaboración
+                <input type="radio" id="otro" name="consultas" value="otro"> Otro
+
+                <label for="intereses">Temas de Interés:</label>
+                <input type="checkbox" id="biotecnologia" name="intereses" value="biotecnologia" > Biotecnología
+                <input type="checkbox" id="ia" name="intereses" value="ia" > Inteligencia Artificial
+                <input type="checkbox" id="cuantica" name="intereses" value="cuantica" > Tecnología Cuántica
+            </fieldset>
+            <fieldset>
+                <legend>Mensaje</legend>
+                <label for="archivo">Subir archivo:</label>
+                <input type="file" id="archivo" name="archivo" accept=".pdf">
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </fieldset>
+            <hr>
+            <label for="Botones"></label>
+            <input type="submit" value="Enviar Consulta">
+            <input type="reset" value="Limpiar Formulario">
+        </form>
+    </body>
+</html>
