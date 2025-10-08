@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tu PC Favorita</title>
+    </head>
+    <body>
+        <h1>Tu PC Favorita</h1>
+        <p>Bienvenido a tu tienda de confianza donde disponemos de los mejores equipos para tus necesidades!</p>
+        <header>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="product.html">Producto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <aside>
+                <h2>Filtros a tu gusto:</h2>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Por Categoría:</legend>
+                        <input type="checkbox" id="gaming" name="category" value="gaming"> Gaming
+                        <input type="checkbox" id="pro" name="category" value="pro"> Pro
+                        <input type="checkbox" id="lowprice" name="category" value="lowprice"> Gama Baja
+                        <input type="checkbox" id="midprice" name="category" value="midprice"> Gama Media
+                        <input type="checkbox" id="highprice" name="category" value="highprice"> Gama Alta
+                    </fieldset>
+                    <fieldset>
+                        <legend>Por rango de precio:</legend>
+                        <label for="price-min">$0</label>
+                        <input type="range" name="price" id="price" min="0" max="5000" step="50">
+                        <label for="price-max">$5000</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Por Marca:</legend>
+                        <label for="brand"></label>
+                        <input type="checkbox" id="asus" name="brand" value="asus"> ASUS
+                        <input type="checkbox" id="razer" name="brand" value="razer"> Razer
+                        <input type="checkbox" id="cyberpowerpc" name="brand" value="cyberpowerpc"> CyberPowerPC
+                        <input type="checkbox" id="acer" name="brand" value="acer"> Acer
+                    </fieldset>
+                </form>
+            </aside>
+            <section>
+                <article>
+                    <h3>Acer Nitro V Laptop para juegos</h3>
+                    <p><u><strong>US$849.99</strong></u></p>
+                    <p>Procesador <strong>Intel Core i7-13620H</strong> | GPU NVIDIA <strong>GeForce RTX 4050</strong> para portátil | Pantalla FHD IPS de <strong>15.6 pulgadas de 165 Hz </strong>| Memoria RAM <strong>DDR5 de 16 GB</strong> |
+                    Disco Duro: <strong>SSD de 1 TB Gen 4</strong> | Con Wi-Fi</p>
+                    <figure>
+                        <img width="800" height="500" src="../images/acernitrov.jpg" alt="Acer Nitro V, laptop para juegos">
+                        <figcaption><em>Acer Nitro V, laptop para juegos</em></figcaption>
+                    </figure>
+                </article>
+                <article>
+                    <h3>CyberPowerPC Gamer Xtreme VR Gaming PC</h3>
+                    <p><u><strong>US$1049.99</strong></u></p>
+                    <p>Procesador <strong>Intel Core i5-13400F 2.5GHz</strong>, GPU NVIDIA <strong>GeForce RTX 5060 8GB</strong>, Memoria RAM <strong>16GB DDR5</strong>,
+                    Disco duro de <strong>1TB PCIe 4.0 SSD</strong>, Con WiFi Ready y Windows 11 Home</p>
+                    <figure>
+                        <img width="800" height="700" src="../images/cyberpowerpc.jpg" alt="PC Prearmada CyberpowerPC, para gaming">
+                        <figcaption><em>PC Prearmada CyberpowerPC, para gaming</em></figcaption>
+                    </figure>
+                </article>
+                <article>
+                    <h3>Razer Teclado mecánico BlackWidow V4 Pro</h3>
+                    <p><u><strong>US$189.99</strong></u></p>
+                    <p>Para juegos con cableado: interruptores naranjas <strong>táctiles y silenciosos</strong>, teclas <strong>ABS de doble enfoque</strong>,
+                    con esfera de comando, <strong>Chroma RGB</strong> y un reposamuñecas magnético</p>
+                    <figure>
+                        <img width="800" height="500" src="../images/razerblackwidowv4pro.jpg" alt="Teclado Razer Black Widow V4 Pro, alámbrico">
+                        <figcaption><em>Teclado Razer Black Widow V4 Pro, alámbrico</em></figcaption>
+                    </figure>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <hr>
+            <section>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31387.163619283416!2d-66.97429935922648!3d10.469459079297609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5f625634446d%3A0xc3834cdb9c4182e9!2sMultipc%20Venezuela%20c.a!5e0!3m2!1ses!2sve!4v1759926494087!5m2!1ses!2sve" 
+                width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Mapa de la ubicación de la tienda Multipc Venezuela">
+                </iframe>
+                <ul>
+                    <h4>Articulos que podrian interesarle:</h4>
+                    <li><a href="https://hardzone.es/tutoriales/compras/mejores-accesorios-pc/" target="_blank">Los accesorios que no sabías que necesitabas para tu setup aquí!</a></li>
+                    <li><a href="https://www.ign.com/articles/best-gaming-pc" target="_blank">Infórmate sobre las mejores máquinas gaming de escritorio de este 2025!</a></li>
+                    <li><a href="https://pcracing.pro/mejores-portatiles-gaming-calidad-precio/" target="_blank">Mejores equipos portátiles gaming en relación calidad-precio del año!</a></li>
+                </ul>
+                <p>© 2025 Tienda TuPCfavorita. Todos los derechos reservados.</p>
+            </section>
+        </footer>
+    </body>
+</html>
