@@ -80,7 +80,7 @@ main > section:nth-of-type(2) ul { display:flex; gap:var(--space-sm); padding:0;
 main > section:nth-of-type(2) ul li { list-style:none; }
 
 /* product grid uses auto-fit/auto-fill with minmax */
-main > section:nth-of-type(2) > div:last-of-type {
+main > section:nth-of-type(2) > div > div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 22vw, 280px), 1fr));
   gap: var(--space-md);
