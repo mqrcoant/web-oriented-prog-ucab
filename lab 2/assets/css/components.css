@@ -39,11 +39,8 @@ article[tabindex] {
   border-radius: var(--radius-md);
   box-shadow: var(--card-shadow);
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: var(--space-sm);
-  align-items: center;
-  padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
   transition: transform var(--motion-time) ease, box-shadow var(--motion-time) ease;
 }
 article[tabindex]:hover { transform: translateY(-6px); }
@@ -52,13 +49,16 @@ article[tabindex]:focus-visible { outline: 2px solid var(--color-accent); }
 /* image placeholder inside card (first child div) */
 article[tabindex] > div:first-child {
   background: linear-gradient(135deg, rgba(11,34,57,0.04), rgba(199,155,83,0.06));
-  height: 100px;
-  border-radius: calc(var(--radius-sm) - 2px);
+  height: 200px;
+  width: 100%;
 }
 
 /* card text area */
+article[tabindex] > div:last-child { 
+  padding: var(--space-md);
+}
 article[tabindex] > div:last-child h3 { font-size: var(--fs-sm); margin-bottom: 0.25rem; }
-article[tabindex] > div:last-child p { color: var(--color-muted); font-weight:700; }
+article[tabindex] > div:last-child p { color: var(--color-muted); font-weight:700; margin-bottom: var(--space-sm); }
 
 /* Offers badge using pseudo-element */
 .offer-badge { position: relative; display: inline-block; }
