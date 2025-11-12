@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- HEAD: metadata only; no stylesheets included -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="TecnoMercado · Laboratorio 2" />
+    <title>TecnoMercado · Plantilla (Lab 2)</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+  </head>
+  <body>
+    <!-- HEADER: site branding and primary navigation -->
+    <header role="banner">
+      <div>
+        <a href="#">TecnoMercado</a>
+        <nav>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#ofertas">Ofertas</a></li>
+            <li><a href="#producto">Producto</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN: page content wrapper -->
+    <main role="main">
+      <!-- HERO: landing intro and promotional notice -->
+      <section>
+        <div>
+          <div>
+            <h1>Tu mercado digital</h1>
+            <p>Explora productos a buen precio con una experiencia fluida y accesible.</p>
+            <a href="#catalogo">Ver catálogo</a>
+          </div>
+          <div></div>
+        </div>
+        <div>Envíos gratis en compras superiores a $50</div>
+      </section>
+
+      <!-- CATALOG: category links and featured products grid -->
+      <section>
+        <div>
+          <h2>Catálogo destacado</h2>
+          <ul>
+            <li><a href="#">Electrónica</a></li>
+            <li><a href="#">Hogar</a></li>
+            <li><a href="#">Ropa</a></li>
+            <li><a href="#">Deportes</a></li>
+          </ul>
+
+          <div>
+            <article tabindex="0">
+              <div></div>
+              <div>
+                <h3>Auriculares inalámbricos</h3>
+                <p>$49.90</p>
+                <button>Ver detalle</button>
+              </div>
+            </article>
+            <article tabindex="0">
+              <div></div>
+              <div>
+                <h3>Batidora de mano</h3>
+                <p>$29.50</p>
+                <button>Ver detalle</button>
+              </div>
+            </article>
+            <article tabindex="0">
+              <div></div>
+              <div>
+                <h3>Camiseta deportiva</h3>
+                <p>$19.99</p>
+                <button>Ver detalle</button>
+              </div>
+            </article>
+            <article tabindex="0">
+              <div></div>
+              <div>
+                <h3>Balón de fútbol</h3>
+                <p>$24.00</p>
+                <button>Ver detalle</button>
+              </div>
+            </article>
+            <article tabindex="0">
+              <div></div>
+              <div>
+                <h3>Teclado mecánico</h3>
+                <p>$69.00</p>
+                <button>Ver detalle</button>
+              </div>
+            </article>
+            <article tabindex="0">
+              <div></div>
+              <div>
+                <h3>Lámpara de escritorio</h3>
+                <p>$17.49</p>
+                <button>Ver detalle</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- OFFERS: seasonal deals and promotions -->
+      <section>
+        <div>
+          <h2>Ofertas de temporada</h2>
+          <div>
+            <div>
+              <span>-20%</span>
+              <h3>Audio y Sonido</h3>
+              <p>Descuento en accesorios seleccionados.</p>
+              <a href="#">Comprar</a>
+            </div>
+            <div>
+              <span>-30%</span>
+              <h3>Cocina</h3>
+              <p>Mejora tu espacio con precios especiales.</p>
+              <a href="#">Comprar</a>
+            </div>
+            <div>
+              <span>-15%</span>
+              <h3>Deportes</h3>
+              <p>Equípate para tu próxima meta.</p>
+              <a href="#">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCT: single product detail section -->
+      <section>
+        <div>
+          <div aria-hidden="true"></div>
+          <div>
+            <h2>Auriculares inalámbricos</h2>
+            <p>Modelo X120 · Bluetooth 5.0 · Cancelación de ruido</p>
+            <p>Sonido envolvente, autonomía de 20h y carga rápida USB‑C. Diseño ergonómico para uso prolongado.</p>
+            <ul>
+              <li>Batería: 20h</li>
+              <li>Conectividad: BT 5.0</li>
+              <li>Garantía: 12 meses</li>
+            </ul>
+            <div>
+              <span>$49.90</span>
+              <button>Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT: contact form -->
+      <section>
+        <div>
+          <h2>Contacto</h2>
+          <form action="#" method="post">
+            <div>
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="tucorreo@dominio.com" />
+            </div>
+            <div>
+              <label for="asunto">Asunto</label>
+              <input id="asunto" name="asunto" type="text" placeholder="Motivo del mensaje" />
+            </div>
+            <div>
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu consulta"></textarea>
+            </div>
+            <div>
+              <button type="reset">Limpiar</button>
+              <button type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER: site footer with secondary navigation -->
+    <footer role="contentinfo">
+      <div>
+        <div>
+          <h3>TecnoMercado</h3>
+          <p>E-commerce de referencia con envíos en 24-48h.</p>
+        </div>
+        <nav aria-label="Secundaria">
+          <ul>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Soporte</a></li>
+          </ul>
+        </nav>
+        <div>
+          <a href="#inicio">Volver arriba</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+

@@ -1,0 +1,125 @@
+/*
+  base.css
+  - Variables globales (:root) para colores, tipografías, espaciados
+  - Escala tipográfica fluida (clamp)
+  - Utilidades genéricas (contenedor, helpers)
+*/
+
+/*
+  Paleta elegida (justificación para marca de moda masculina, gama media-alta):
+  - #0B2239 (azul noche): transmite sobriedad y confianza en productos de buena calidad.
+  - #C79B53 (oro cálido): acento elegante que sugiere cuidado y valor sin ser ostentoso.
+  - escala de grises (#F7F7F7 → #111827): para buen contraste y lectura.
+  Tipografías: "Courier New", Consolas, monospace — una decisión deliberada para dar
+  un carácter técnico, masculino y distintivo a la marca, manteniendo legibilidad y personalidad.
+*/
+
+:root {
+  /* colores */
+  --color-bg: #F7F7F7;
+  --color-surface: #FFFFFF;
+  --color-ink: #111827;
+  --color-muted: #6B7280;
+  --color-primary: #0B2239; /* azul noche */
+  --color-accent: #C79B53;  /* oro cálido */
+  --color-success: #1F7A3A;
+  --color-danger: #B00020;
+
+  /* espaciado */
+  --space-xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+
+  /* radios y sombras */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --card-shadow: 0 6px 18px rgba(11,34,57,0.08), 0 2px 6px rgba(11,34,57,0.04);
+
+  /* z-index */
+  --z-header: 900;
+  --z-banner: 850;
+
+  /* escala tipográfica fluida (usar clamp) */
+  --fs-xs: clamp(0.75rem, calc(0.65rem + 0.3vw), 0.9rem);
+  --fs-sm: clamp(0.875rem, calc(0.8rem + 0.5vw), 1rem);
+  --fs-md: clamp(1rem, calc(0.95rem + 0.8vw), 1.125rem);
+  --fs-lg: clamp(1.25rem, calc(1.1rem + 1.2vw), 1.75rem);
+  --fs-xl: clamp(1.75rem, calc(1.4rem + 2.5vw), 2.5rem);
+
+  --container-max: 1200px;
+
+  /* motion preferences */
+  --motion-time: 220ms;
+}
+
+/* base reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 16px;
+  color: var(--color-ink);
+  background-color: var(--color-bg);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accessible focus states */
+:focus {
+  outline: none;
+}
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-accent) 20%, white);
+  outline-offset: 2px;
+}
+
+/* container utility */
+.container {
+  width: min(94%, var(--container-max));
+  margin-inline: auto;
+  padding-inline: max(var(--space-sm), calc(1vw + 0.5rem));
+  padding-block: 0;
+}
+
+/* type helpers */
+h1, h2, h3, h4, h5 {
+  margin: 0 0 var(--space-sm) 0;
+  line-height: 1.1;
+}
+h1 { font-size: var(--fs-xl); }
+h2 { font-size: var(--fs-lg); }
+h3 { font-size: var(--fs-md); }
+p { margin: 0 0 var(--space-md) 0; font-size: var(--fs-sm); }
+
+/* links and selection */
+a { color: var(--color-primary); text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+::selection { background: var(--color-accent); color: white; }
+
+/* emphasis utilities */
+.muted { color: var(--color-muted); }
+.em { color: var(--color-primary); font-weight: 600; }
+
+/* small accessible helper */
+.visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px,1px,1px,1px); white-space: nowrap; }
+
+/* form basics: ensure consistent controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* simple grid helper for small repeated gaps */
+.flow > * + * { margin-top: var(--space-md); }
+
+

@@ -1,0 +1,43 @@
+/*
+  animations.css
+  - Transiciones para hover/focus de botones, cards y enlaces
+  - @keyframes para badges u otros elementos (p. ej., pulse, fadeInUp)
+  - Transformaciones suaves (scale/translate) y timings accesibles
+*/
+
+/* transitions used across components */
+:root {
+  --ease-std: cubic-bezier(.2,.9,.2,1);
+}
+
+a, .btn, article[tabindex] { transition: transform var(--motion-time) var(--ease-std), box-shadow var(--motion-time) var(--ease-std); }
+
+/* keyframes */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float-subtle {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes badge-pop {
+  0% { transform: scale(0.85); opacity: 0; }
+  60% { transform: scale(1.06); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* utility animations */
+.animate-fade-in { animation: fade-in-up 420ms var(--ease-std) both; }
+.animate-float { animation: float-subtle 4s ease-in-out infinite; }
+.badge-pop { animation: badge-pop 360ms var(--ease-std) both; }
+
+/* reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in, .animate-float, .badge-pop, a, .btn, article[tabindex] { animation: none !important; transition: none !important; }
+}
+
+
